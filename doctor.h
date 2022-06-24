@@ -21,7 +21,11 @@ public:
     int getcategory() const { return category; }
     int consPrice() const { return category*salary/16; }
 
-    int consult() { return ++patientCount; }
+    void consult()
+    {
+        ++patientCount;
+    }
+
 
     void setspec(std::string tmp_spec) { specialization = tmp_spec; }
     void setcount(int tmp_pc) { patientCount = tmp_pc; }

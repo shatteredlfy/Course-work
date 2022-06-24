@@ -165,23 +165,25 @@ int main()
 
                        case 2:
                        {
-                       if(electrics.isEmpty() != true)
-                       {
-                           int position;
-                           electrics.printPerson();
-                           std::cout << "Choose position of electricians you want to remove: " << std::endl;
-                           std::cin >> position;
+                           if(electrics.isEmpty() != true)
+                           {
+                               int position;
+                               electrics.printPerson();
+                               std::cout << "Choose position of electricians you want to remove: " << std::endl;
+                               std::cin >> position;
 
-                           electrics.removePerson(position);
-                           system("cls");
+                               electrics.removePerson(position);
+                               system("cls");
+                               break;
+                           }
+
+                           else
+                           {
+                               std::cout << "There is no electricians here. " << std::endl;
+                               break;
+                           }
                        }
 
-                       else
-                       {
-                           std::cout << "There is no electricians here. " << std::endl;
-                       }
-                       break;
-                       }
                        case 0:
                        {
                            break;
@@ -197,7 +199,7 @@ int main()
                {
                    int d;
                    std::cout << "1. Print all available people." << std::endl;
-                   std::cout << "2. ." << std::endl;
+                   std::cout << "2. Choose person type." << std::endl;
                    std::cout << "0. Exit."<< std::endl;
                    std::cin >> d;
                    system("cls");
@@ -229,7 +231,44 @@ int main()
                        }
                        case 2:
                        {
+                           int ch;
+                           std::cout << "1. Doctor." << std::endl;
+                           std::cout << "2. Electric." << std::endl;
+                           std::cin >> ch;
+                           system("cls");
+                           switch (ch)
+                           {
+                               case 1:
+                               {
+                                   int doc;
+                                   std::cout << "1. Consultation." << std::endl;
+                                   std::cout << "2. Sort by consultation price." << std::endl;
+                                   std::cin >> doc;
+                                   system("cls");
+                                   switch (doc)
+                                   {
+                                       case 1:
+                                       {
 
+                                       }
+                                   }
+                               }
+                               case 2:
+                               {
+                                   int elec;
+                                   std::cout << "1. Sort by object." << std::endl;
+                                   std::cout << "2. Set new object." << std::endl;
+                                   std::cin >> elec;
+                                   system("cls");
+                                   switch (elec)
+                                   {
+                                       case 1:
+                                       {
+
+                                       }
+                                   }
+                               }
+                           }
                        }
                        case 0:
                        {
