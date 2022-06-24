@@ -27,8 +27,5 @@ public:
     int getAmount() const { return humans.size(); }
 
 private:
-    Doctor* editDocEm(Doctor* doctor);
-    Electric* editElEm(Electric* electric);
-
     std::vector<Person*> humans;
 };
