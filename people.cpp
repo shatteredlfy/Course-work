@@ -1,5 +1,11 @@
 #pragma once
 #include "people.h"
+#include "person.h"
+#include "person.cpp"
+#include "doctor.h"
+#include "doctor.cpp"
+#include "electric.h"
+#include "electric.cpp"
 
 People::~People()
 {

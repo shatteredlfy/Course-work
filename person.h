@@ -1,8 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <stdexcept>
-#include <sstream>
 
 class Person
 {
@@ -29,13 +27,12 @@ public:
     void setweight(int tmp_w) { weight = tmp_w; }
     void setemail(std::string tmp_em) { email = tmp_em; }
 
-    void setnewemail(std::string new_em) { new_em = email; }
-
     virtual std::string Info() const;
 
-    enum Type{
-        doctor
-        //electric
+    enum Type
+    {
+        doctor,
+        electric
     };
 
     Type getType() const { return type; }

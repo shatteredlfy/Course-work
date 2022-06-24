@@ -1,8 +1,11 @@
 #pragma once
 #include <vector>
 #include "person.h"
+#include "person.cpp"
 #include "doctor.h"
-//#include "electric.h"
+#include "doctor.cpp"
+#include "electric.h"
+#include "electric.cpp"
 
 class People
 {
@@ -24,5 +27,8 @@ public:
     int getAmount() const { return humans.size(); }
 
 private:
+    Doctor* editDocEm(Doctor* doctor);
+    Electric* editElEm(Electric* electric);
+
     std::vector<Person*> humans;
 };

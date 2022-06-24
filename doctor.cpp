@@ -18,27 +18,18 @@ std::string tmp_spec, int tmp_pc, int tmp_sal, int tmp_cat) :
 
 std::string Doctor::Info() const
 {
-  /*  return "Name: " + getfname() + ' ' + getlname()
-       + "\nBirthdate: " + getday() + '.' +  getmonth() + '.' + getyear()
-       + "\nHeight: " + getheight() + " Weight: " + getweight()
-       + "\nEmail: " + getemail() + "\nSpecification: " + specialization
-       + "\nCount of patients: " + std::to_string(patientCount)
-       + "\nSalary: " + std::to_string(salary)
-       + "\nCategory: " + std::to_string(category)
-       + "\nConsultation price: " + std::to_string(consPrice());*/
+    std::stringstream dd;
 
-       std::stringstream dd;
+    dd << "Name: " << getfname() << ' ' << getlname()
+       << "\nBirthdate: " << getday() << '.' << getmonth() << '.' << getyear()
+       << "\nHeight: " << getheight() << " Weight: " << getweight()
+       << "\nEmail: " << getemail() << "\nSpecification: " << specialization
+       << "\nCount of patients: " << std::to_string(patientCount)
+       << "\nSalary: " << std::to_string(salary)
+       << "\nCategory: " << std::to_string(category)
+       << "\nConsultation price: " << std::to_string(consPrice());
 
-       dd << "Name: " << getfname() << ' ' << getlname()
-          << "\nBirthdate: " << getday() << '.' << getmonth() << '.' << getyear()
-          << "\nHeight: " << getheight() << " Weight: " << getweight()
-          << "\nEmail: " << getemail() << "\nSpecification: " << specialization
-          << "\nCount of patients: " << std::to_string(patientCount)
-          << "\nSalary: " << std::to_string(salary)
-          << "\nCategory: " << std::to_string(category)
-          << "\nConsultation price: " << std::to_string(consPrice());
-
-       return dd.str();
+    return dd.str();
 }
 
 void Doctor::checkInfo()
@@ -50,4 +41,7 @@ void Doctor::checkInfo()
 
     if(salary < 0)
         throw std::invalid_argument("Error..\nSalary can't be less than 0.");
+
+    if(category < 0)
+        throw std::invalid_argument("Error..\nCategory can't be less than 0.");
 }
